@@ -7,7 +7,7 @@ type GlowCardProps = {
 
 export const GlowCard = ({ children, identifier }: GlowCardProps) => {
   useEffect(() => {
-    const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
+    const CONTAINER = document.querySelector(`.glow-container-${identifier}`) as HTMLElement;
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
 
     const CONFIG = {
@@ -19,9 +19,10 @@ export const GlowCard = ({ children, identifier }: GlowCardProps) => {
       opacity: 0,
     };
 
-    const UPDATE = (event) => {
+    const UPDATE = (event: any) => {
       for (const CARD of CARDS) {
         const CARD_BOUNDS = CARD.getBoundingClientRect();
+        const CARD_HTML = CARD as HTMLElement;
 
         if (
           event?.x > CARD_BOUNDS.left - CONFIG.proximity &&
@@ -29,9 +30,9 @@ export const GlowCard = ({ children, identifier }: GlowCardProps) => {
           event?.y > CARD_BOUNDS.top - CONFIG.proximity &&
           event?.y < CARD_BOUNDS.top + CARD_BOUNDS.height + CONFIG.proximity
         ) {
-          CARD.style.setProperty("--active", 1);
+          CARD_HTML.style.setProperty("--active", "1");
         } else {
-          CARD.style.setProperty("--active", CONFIG.opacity);
+          CARD_HTML.style.setProperty("--active", CONFIG.opacity.toString());
         }
 
         const CARD_CENTER = [
@@ -46,16 +47,16 @@ export const GlowCard = ({ children, identifier }: GlowCardProps) => {
 
         ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
 
-        CARD.style.setProperty("--start", ANGLE + 90);
+        CARD_HTML.style.setProperty("--start", (ANGLE + 90).toString());
       }
     };
 
     document.body.addEventListener("pointermove", UPDATE);
 
     const RESTYLE = () => {
-      CONTAINER.style.setProperty("--gap", CONFIG.gap);
-      CONTAINER.style.setProperty("--blur", CONFIG.blur);
-      CONTAINER.style.setProperty("--spread", CONFIG.spread);
+      CONTAINER.style.setProperty("--gap", CONFIG.gap.toString());
+      CONTAINER.style.setProperty("--blur", CONFIG.blur.toString());
+      CONTAINER.style.setProperty("--spread", CONFIG.spread.toString());
       CONTAINER.style.setProperty(
         "--direction",
         CONFIG.vertical ? "column" : "row"
@@ -63,7 +64,7 @@ export const GlowCard = ({ children, identifier }: GlowCardProps) => {
     };
 
     RESTYLE();
-    UPDATE();
+    UPDATE(null);
 
     // Cleanup event listener
     return () => {
