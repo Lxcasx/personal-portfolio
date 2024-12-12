@@ -21,3 +21,19 @@ export const personalInfo = {
     linkedIn: "https://www.linkedin.com/in/lucas-heinschke-052527241/",
   }
 };
+
+
+export const navbarItems = [
+  {
+    title: "About",
+    link: "#about",
+  },
+  {
+    title: "Experience",
+    link: "#experience",
+  },
+  {
+    title: "Skills",
+    link: "#skills",
+  }
+]
