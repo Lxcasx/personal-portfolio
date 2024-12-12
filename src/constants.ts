@@ -1,6 +1,7 @@
 export const personalInfo = {
   name: "Lucas",
   aliasName: "Lxcasx",
+  contactMail: "contact@lxcasx.de",
   skills: ["DotNet", "NestJS", "Docker", "Kubernetes", "React", "Git", "TypeScript", "Python", "ReactNative"],
   designation: "Software Engineer",
   description: "I am a software engineer who loves to build scalable and reliable software systems. I have experience in building web applications, mobile applications, and microservices. I am passionate about learning new technologies and building cool stuff.",
