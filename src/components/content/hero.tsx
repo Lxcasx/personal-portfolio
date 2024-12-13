@@ -26,7 +26,7 @@ export function HeroSection() {
             Hello, <br />
             This is <span className=" text-pink-500">{personalInfo.name}</span>
             {` , I'm a junior `}
-            <span className=" text-[#16f2b3]">{personalInfo.designation}</span>.
+            <span className=" text-cyan-500">{personalInfo.designation}</span>.
           </h1>
 
           <div className="my-12 flex items-center gap-5">

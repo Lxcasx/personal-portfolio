@@ -6,6 +6,7 @@ import { GlowCard } from "../display/glow-card";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { AnimationLottie } from "../display/animation-lottie";
 import code from "../../assets/lottie/code.json";
+import { SectionHeading } from "../display/heading/section-heading";
 
 export function ExperiencesSection() {
   return (
@@ -18,15 +19,7 @@ export function ExperiencesSection() {
         className="absolute top-0 -z-10"
       />
 
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
-          </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-        </div>
-      </div>
+      <SectionHeading direction="row">Experiences</SectionHeading>
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
@@ -50,7 +43,7 @@ export function ExperiencesSection() {
                         className="absolute bottom-0 opacity-80"
                       />
                       <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
+                        <p className="text-xs sm:text-sm text-cyan-500">
                           {experience.duration}
                         </p>
                       </div>
