@@ -1,3 +1,5 @@
+import "./css/tailwind.css";
+
 import "./css/card.scss";
 import "./css/global.scss";
 
