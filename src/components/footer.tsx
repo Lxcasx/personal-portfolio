@@ -7,7 +7,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Website is based on the Developer Portfolio by <a target="_blank" href="https://github.com/said7388/developer-portfolio" className="text-[#16f2b3]">Abu Said</a>
+            © Website is based on the Developer Portfolio by <a target="_blank" href="https://github.com/said7388/developer-portfolio" className=" text-pink-500">Abu Said</a>
           </p>
           <div className="flex items-center gap-5">
             {/* <a
