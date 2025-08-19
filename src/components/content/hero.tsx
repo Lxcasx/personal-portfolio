@@ -97,7 +97,7 @@ export function HeroSection() {
                 <span className=" text-white">skills:</span>
                 <span className="text-gray-400">{`[`}</span>
                 {personalInfo.skills.map((skill, index) => (
-                  <>
+                  <div key={`${index}-wrapper`}>
                     <span
                       key={`${index}-1`}
                       className="text-gray-400"
@@ -117,7 +117,7 @@ export function HeroSection() {
                         className="text-gray-400"
                       >{`'],`}</span>
                     )}
-                  </>
+                  </div>
                 ))}
               </div>
               <div>
