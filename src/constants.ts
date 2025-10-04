@@ -18,9 +18,14 @@ export const personalInfo = {
     "I am a software engineer who loves to build scalable and reliable software systems. I have experience in building web applications, mobile applications, and microservices. I am passionate about learning new technologies and building cool stuff.",
   experiences: [
     {
+      title: "Consultant - Software Engineer",
+      description: "Cluster Reply DE",
+      duration: "Oct 2025 - Present",
+    },
+    {
       title: "Dual Bachelor's Degree in Computer Science",
       description: "HWR Berlin - FiANTEC Provisionslösungen GmbH",
-      duration: "2022 - Present",
+      duration: "Sep 2022 - Sep 2025",
     },
     {
       title: "Co Creator - Notenapp",
